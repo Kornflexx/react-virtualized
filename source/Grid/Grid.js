@@ -1067,7 +1067,11 @@ class Grid extends React.PureComponent<Props, State> {
               position: 'relative',
               ...containerStyle,
             }}>
-            {childrenToDisplay}
+              <div
+                style={{ transform: 'scaleY(-1)' }}
+              />
+                {childrenToDisplay}
+              </div>
           </div>
         )}
         {showNoContentRenderer && noContentRenderer()}
